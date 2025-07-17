@@ -1,0 +1,21 @@
+.tooltip-text {
+    font-style: italic;
+    color: #757575;
+}
+.My-Main-Content {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 800px) {
+    .My-Main-Content {
+        width: 95%;
+        margin-top: 10px;
+    }
+}
+@media screen and (min-width: 800px) {
+    .My-Main-Content {
+        width: 60%;
+        margin-top: 20px;
+    }
+}
