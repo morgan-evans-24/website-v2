@@ -1,9 +1,10 @@
 function Footer() {
   return (
     <div
-      className="container-fluid p-5 mt-5"
+      className="container-fluid p-5 m-0"
       style={{
         backgroundColor: "#2b3035",
+        zIndex: 1,
       }}
     >
       <p

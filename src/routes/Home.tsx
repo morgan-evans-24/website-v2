@@ -2,14 +2,14 @@
 
 // TODO Get this working
 
-import ShaderAsBackground from "../components/ShaderAsBackground.tsx";
+import Boxes from "../components/ShaderAsBackground.tsx";
+import "../css/Home.css";
 
 function Home() {
   return (
-    <>
-      <p>Home Screen</p>
-      <ShaderAsBackground />
-    </>
+    <div className="shader-background">
+      <Boxes />
+    </div>
   );
 }
 
