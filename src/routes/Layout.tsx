@@ -9,9 +9,7 @@ function Layout() {
     <>
       <div className="layout">
         <CustomNavbar />
-        <div className="main-layout-content">
-          <Outlet />
-        </div>
+        <Outlet />
         <Footer />
       </div>
     </>

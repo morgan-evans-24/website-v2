@@ -2,6 +2,16 @@
     font-style: italic;
     color: #757575;
 }
+
+.align-center-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: flex-start;
+    width: 100vw;
+    padding-top: 20px;
+}
+
 .My-Main-Content {
     display: flex;
     flex-direction: column;

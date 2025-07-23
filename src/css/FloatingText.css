@@ -1,0 +1,61 @@
+
+
+.div-background {
+    scroll-snap-align: start;
+    height: 80vh;
+    align-items: center;
+
+    font-size: 2rem;
+    margin: 5vh 0vh 25vh 0vh;
+    box-sizing: border-box;
+    background-color: #00000077;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.2),
+    0 0 80px rgba(0, 0, 0, 0.1),
+    0 0 160px rgba(0, 0, 0, 0.05);
+
+    border-radius: 15px;
+}
+
+.text {
+    margin: 30px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.Typewriter__wrapper {
+    color: white;
+}
+.Typewriter__cursor {
+    color: white;
+}
+
+.fly-in {
+    opacity: 0;
+    transition-delay: 1s;
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 35vw;
+}
+
+.fly-in.flyInLeft {
+    transform: translateX(-20vw);
+    align-self: start;
+}
+
+.fly-in.flyInRight {
+    transform: translateX(20vw);
+    align-self: end;
+}
+
+.fly-in.show, .fade-in.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in {
+    opacity: 0;
+    transition: all 2s ease;
+    width: 60vw;
+    text-align: center;
+}
