@@ -1,0 +1,14 @@
+html body {
+    background-color: black;
+}
+
+.container {
+    display: grid;
+    gap: 8px;
+    padding: 0 !important;
+}
+
+.element-container {
+    border-radius: 8px;
+    padding: 0 !important;
+}

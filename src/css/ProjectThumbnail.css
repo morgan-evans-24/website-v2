@@ -1,0 +1,33 @@
+.project-thumbnail {
+    margin: -25px;
+    position: relative;
+    width: calc(100% + 50px); /* grow to cover extra space */
+    height: calc(100% + 50px);
+    overflow: hidden;
+    background-color: #010219;
+    padding: 0 !important;
+}
+
+.project-thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.header-background {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2b3035;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 2% 5% 2% 5%;
+}
+
+.project-thumbnail h1{
+    font-size: 1rem;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
