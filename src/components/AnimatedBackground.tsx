@@ -13,8 +13,6 @@ import vertexMain from "../shaders/vertex_main.glsl?raw";
 import fragmentMain from "../shaders/fragment_main.glsl?raw";
 import fragmentPars from "../shaders/fragment_pars.glsl?raw";
 
-import "../css/AnimatedBackground.css";
-
 function Orb({
   setLoaded,
   ...props

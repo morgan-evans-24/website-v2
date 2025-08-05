@@ -1,9 +1,10 @@
 .tooltip-text {
     font-style: italic;
-    color: #757575;
+    color: #AAAAAA;
 }
 
 .align-center-container {
+    background-color: #000;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -15,7 +16,29 @@
 .My-Main-Content {
     display: flex;
     flex-direction: column;
+    color: #fff;
     margin-bottom: 70px;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+
+}
+
+.aboutme-image {
+    width: 550px;
+    height: auto;
+    margin: auto;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 20%;
+}
+
+.education-ul {
+    list-style-type: disc;
 }
 
 @media screen and (max-width: 800px) {

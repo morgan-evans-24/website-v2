@@ -1,14 +1,68 @@
-html body {
-    background-color: black;
-}
 
 .container {
     display: grid;
-    gap: 8px;
+    gap: 25px;
     padding: 0 !important;
 }
 
 .element-container {
     border-radius: 8px;
     padding: 0 !important;
+    transition: all 0.2s ease;
+}
+.element-container:hover {
+    transform: scale(1.05) translateZ(50px);
+    z-index: 10;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.projects-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black; !important;
+}
+
+.Typewriter__wrapper {
+    color: white;
+    font-size: xx-large;
+}
+.Typewriter__cursor {
+    font-size: xx-large;
+}
+
+.header-subtext {
+    color: white;
+}
+
+.divider {
+    border: none;
+    height: 2px;
+    width: 100%;
+    background-color: gray;
+    margin: 20px 0;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: flex-start;
+    width: 100vw;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .content-container {
+        width: 95%;
+        margin-top: 10px;
+    }
+}
+@media screen and (min-width: 800px) {
+    .content-container {
+        width: 60%;
+        margin-top: 20px;
+    }
 }

@@ -21,7 +21,7 @@ function FloatingText({ headerText, bodyText, animationStyle }: props) {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("show");
+            entry.target.classList.add("show-text");
             observer.unobserve(entry.target);
           }
         });
