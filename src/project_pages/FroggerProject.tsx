@@ -18,7 +18,7 @@ function FroggerProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/frogger_imgs/frogger.png"}
+              src={"/assets/frogger_imgs/frogger.png"}
               alt={'A recreation of the classic arcade game "frogger"'}
             ></img>
             <div className="tech-list-div">

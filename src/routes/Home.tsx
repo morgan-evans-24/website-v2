@@ -1,16 +1,22 @@
 // The home page that explains how the website works and points to the other pages
 
-import AnimatedBackground from "../components/AnimatedBackground.tsx";
 import "../css/Home.css";
 import FloatingText from "../components/FloatingText.tsx";
 import MyTypewriter from "../components/MyTypewriter.tsx";
+import { lazy, Suspense } from "react";
+
+const AnimatedBackground = lazy(
+  () => import("../components/AnimatedBackground.tsx"),
+);
 
 function Home() {
   return (
     <>
       <title>Home</title>
       <div className="shader-background">
-        <AnimatedBackground />
+        <Suspense fallback={null}>
+          <AnimatedBackground />
+        </Suspense>
       </div>
       <div className="home-page-content">
         <FloatingText

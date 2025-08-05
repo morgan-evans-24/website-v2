@@ -1,8 +1,7 @@
 .project-thumbnail {
-    margin: -25px;
     position: relative;
-    width: calc(100% + 50px); /* grow to cover extra space */
-    height: calc(100% + 50px);
+    width: 100%; /* grow to cover extra space */
+    height: 100%;
     overflow: hidden;
     background-color: #010219;
     border-radius: 10px;

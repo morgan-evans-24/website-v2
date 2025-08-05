@@ -52,6 +52,7 @@ function ProjectThumbnail(props: Props) {
     >
       <img
         className="project-thumbnail-img"
+        loading={"lazy"}
         src={props.pathToBackground}
         alt={props.altImageText}
       />

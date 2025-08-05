@@ -1,6 +1,7 @@
 import { useInView } from "react-intersection-observer";
 import { useRef } from "react";
 import TypeWriter from "typewriter-effect";
+import "../css/MyTypewriter.css";
 
 function MyTypewriter(text: string) {
   const { ref: inViewRef, inView } = useInView({

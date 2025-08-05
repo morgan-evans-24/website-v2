@@ -1,11 +1,27 @@
-// TODO Maybe look into Bento Grids
-
-import { BentoGrid } from "react-bento";
-import ProjectThumbnail from "../components/ProjectThumbnail.tsx";
+import BentoGrid from "../components/BentoGrid";
 import "../css/Projects.css";
 import MyTypewriter from "../components/MyTypewriter.tsx";
 import ScrollToTop from "../components/ScrollToTop.tsx";
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
+
+const LazyAStarThumbnail = lazy(
+  () => import("../components/project_thumbnails/AStarThumbnail.tsx"),
+);
+const LazyConnect4Thumbnail = lazy(
+  () => import("../components/project_thumbnails/Connect4Thumbnail.tsx"),
+);
+const LazyFallingSandThumbnail = lazy(
+  () => import("../components/project_thumbnails/FallingSandThumbnail.tsx"),
+);
+const LazyFroggerThumbnail = lazy(
+  () => import("../components/project_thumbnails/FroggerThumbnail.tsx"),
+);
+const LazyNoteissimoThumbnail = lazy(
+  () => import("../components/project_thumbnails/NoteissimoThumbnail.tsx"),
+);
+const LazyRayTracerThumbnail = lazy(
+  () => import("../components/project_thumbnails/RayTracerThumbnail.tsx"),
+);
 
 const bentoItems = [
   {
@@ -13,13 +29,9 @@ const bentoItems = [
     color: "black",
     title: "A* Visualisation",
     element: (
-      <ProjectThumbnail
-        header={"A* Visualisation"}
-        pathToBackground={"src/assets/a_star_imgs/a-star-visualisation.png"}
-        altImageText={"Bento"}
-        flyIn={"left"}
-        navigateTo={"astarvisualisation"}
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyAStarThumbnail />
+      </Suspense>
     ),
     width: 2,
     height: 1,
@@ -29,13 +41,9 @@ const bentoItems = [
     color: "black",
     title: "note-issimo",
     element: (
-      <ProjectThumbnail
-        header={"Note-issimo"}
-        pathToBackground={"src/assets/noteissimo_imgs/note-issimo.png"}
-        altImageText={"Bento"}
-        flyIn={"right"}
-        navigateTo={"noteissimo"}
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyNoteissimoThumbnail />
+      </Suspense>
     ),
     width: 4,
     height: 1,
@@ -45,13 +53,9 @@ const bentoItems = [
     color: "black",
     title: "Raytracing Engine",
     element: (
-      <ProjectThumbnail
-        header={"Raytracing Engine"}
-        pathToBackground={"src/assets/ray_tracer_imgs/ray-tracer.png"}
-        altImageText={"Bento"}
-        flyIn={"right"}
-        navigateTo={"raytracer"}
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyRayTracerThumbnail />
+      </Suspense>
     ),
     width: 4,
     height: 2,
@@ -61,13 +65,9 @@ const bentoItems = [
     color: "black",
     title: "Frogger",
     element: (
-      <ProjectThumbnail
-        header={"Frogger"}
-        pathToBackground={"src/assets/frogger_imgs/frogger.png"}
-        altImageText={'The arcade game "frogger"'}
-        flyIn={"right"}
-        navigateTo={"frogger"}
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyFroggerThumbnail />
+      </Suspense>
     ),
     width: 2,
     height: 2,
@@ -77,13 +77,9 @@ const bentoItems = [
     color: "black",
     title: "Connect-4 MiniMax",
     element: (
-      <ProjectThumbnail
-        header={"Connect-4 Minimax"}
-        pathToBackground={"src/assets/connect_4_imgs/connect-4-minimax.png"}
-        altImageText={"Bento"}
-        flyIn={"left"}
-        navigateTo={"connect4minimax"}
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyConnect4Thumbnail />
+      </Suspense>
     ),
     width: 3,
     height: 1,
@@ -93,13 +89,9 @@ const bentoItems = [
     color: "black",
     title: "Falling Sand Simulator",
     element: (
-      <ProjectThumbnail
-        header={"Falling Sand Simulator"}
-        pathToBackground={"src/assets/pexels-padrinan-255379.jpg"}
-        altImageText={"Bento"}
-        flyIn={"right"}
-        navigateTo={"fallingsand"}
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyFallingSandThumbnail />
+      </Suspense>
     ),
     width: 3,
     height: 1,
@@ -112,13 +104,9 @@ const bentoItemsMobile = [
     color: "black",
     title: "A* Visualisation",
     element: (
-      <ProjectThumbnail
-        header={"A* Visualisation"}
-        pathToBackground={"src/assets/a_star_imgs/a-star-visualisation.png"}
-        altImageText={"Bento"}
-        flyIn={"left"}
-        navigateTo={"astarvisualisation"}
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyAStarThumbnail />
+      </Suspense>
     ),
     width: 1,
     height: 1,
@@ -128,13 +116,9 @@ const bentoItemsMobile = [
     color: "black",
     title: "note-issimo",
     element: (
-      <ProjectThumbnail
-        header={"Note-issimo"}
-        pathToBackground={"src/assets/noteissimo_imgs/note-issimo.png"}
-        altImageText={"Bento"}
-        flyIn={"right"}
-        navigateTo={"noteissimo"}
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyNoteissimoThumbnail />
+      </Suspense>
     ),
     width: 1,
     height: 1,
@@ -144,13 +128,9 @@ const bentoItemsMobile = [
     color: "black",
     title: "Raytracing Engine",
     element: (
-      <ProjectThumbnail
-        header={"Raytracing Engine"}
-        pathToBackground={"src/assets/ray_tracer_imgs/ray-tracer.png"}
-        altImageText={"Bento"}
-        flyIn={"right"}
-        navigateTo={"raytracer"}
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyRayTracerThumbnail />
+      </Suspense>
     ),
     width: 1,
     height: 1,
@@ -160,13 +140,9 @@ const bentoItemsMobile = [
     color: "black",
     title: "Frogger",
     element: (
-      <ProjectThumbnail
-        header={"Frogger"}
-        pathToBackground={"src/assets/frogger_imgs/frogger.png"}
-        altImageText={'The arcade game "frogger"'}
-        flyIn={"right"}
-        navigateTo={"frogger"}
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyFroggerThumbnail />
+      </Suspense>
     ),
     width: 1,
     height: 1,
@@ -176,13 +152,9 @@ const bentoItemsMobile = [
     color: "black",
     title: "Connect-4 MiniMax",
     element: (
-      <ProjectThumbnail
-        header={"Connect-4 Minimax"}
-        pathToBackground={"src/assets/connect_4_imgs/connect-4-minimax.png"}
-        altImageText={"Bento"}
-        flyIn={"left"}
-        navigateTo={"connect4minimax"}
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyConnect4Thumbnail />
+      </Suspense>
     ),
     width: 1,
     height: 1,
@@ -192,13 +164,9 @@ const bentoItemsMobile = [
     color: "black",
     title: "Falling Sand Simulator",
     element: (
-      <ProjectThumbnail
-        header={"Falling Sand Simulator"}
-        pathToBackground={"src/assets/pexels-padrinan-255379.jpg"}
-        altImageText={"Bento"}
-        flyIn={"right"}
-        navigateTo={"fallingsand"}
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyFallingSandThumbnail />
+      </Suspense>
     ),
     width: 1,
     height: 1,
@@ -206,9 +174,6 @@ const bentoItemsMobile = [
 ];
 
 function Projects() {
-  // TODO Make this look good on smaller resolutions
-  // Shouldn't be bento'd on smaller resolutions
-
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {

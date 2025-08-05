@@ -18,7 +18,7 @@ function NoteissimoProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/noteissimo_imgs/note-issimo.png"}
+              src={"/assets/noteissimo_imgs/note-issimo.png"}
               alt={"The main page of a note taking app called note-issimo."}
             ></img>
             <div className="tech-list-div">
@@ -48,7 +48,7 @@ function NoteissimoProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/noteissimo_imgs/login.png"}
+              src={"/assets/noteissimo_imgs/login.png"}
               alt={
                 "The login page for a note-taking webapp called note-issimo."
               }
@@ -68,7 +68,7 @@ function NoteissimoProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/noteissimo_imgs/fresh-account.png"}
+              src={"/assets/noteissimo_imgs/fresh-account.png"}
               alt={"A note-issimo account with no notes on it."}
             ></img>
             <p className={"image-caption"}>
@@ -78,7 +78,7 @@ function NoteissimoProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/noteissimo_imgs/account-with-notes.png"}
+              src={"/assets/noteissimo_imgs/account-with-notes.png"}
               alt={"A note-issimo account with multiple notes on it."}
             ></img>
             <p className={"image-caption"}>

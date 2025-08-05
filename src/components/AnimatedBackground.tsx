@@ -1,8 +1,9 @@
-// TODO experiment with wireframe
-// TODO Make sphere fade in
-// Maybe make vertices closer to camera a different color?
+import {
+  Mesh,
+  type WebGLProgramParametersWithUniforms,
+  MeshStandardMaterial,
+} from "three";
 
-import * as THREE from "three";
 import { Suspense, useMemo, useRef, useState } from "react";
 import { type ThreeElements } from "@react-three/fiber";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -17,16 +18,13 @@ function Orb({
   setLoaded,
   ...props
 }: ThreeElements["mesh"] & { setLoaded: (arg0: boolean) => void }) {
-  const meshRef = useRef<THREE.Mesh>(null!);
-  const shaderRef = useRef<THREE.WebGLProgramParametersWithUniforms | null>(
-    null,
-  );
+  const meshRef = useRef<Mesh>(null!);
+  const shaderRef = useRef<WebGLProgramParametersWithUniforms | null>(null);
 
   const material = useMemo(() => {
-    const mat = new THREE.MeshStandardMaterial({
+    const mat = new MeshStandardMaterial({
       emissive: 0x0000ff,
       emissiveIntensity: 0.8,
-      // wireframe: true,
     });
     mat.onBeforeCompile = (shader) => {
       material.userData.shader = shader;
@@ -88,33 +86,29 @@ function AnimatedBackground() {
 
   return (
     <>
-      <Suspense>
-        <Canvas
-          className="scene"
-          style={{
-            backgroundColor: "black",
-            opacity: loaded ? 1 : 0,
-            transition: "opacity 3s ease",
-          }}
-        >
-          <ambientLight intensity={Math.PI * 0.2} color="#4255ff" />
-          <directionalLight
-            position={[2, 2, 2]}
-            color="#526cff"
-            intensity={Math.PI * 0.8}
+      <Canvas
+        className="scene"
+        style={{
+          backgroundColor: "black",
+          opacity: loaded ? 1 : 0,
+          transition: "opacity 3s ease",
+        }}
+      >
+        <ambientLight intensity={Math.PI * 0.2} color="#4255ff" />
+        <directionalLight
+          position={[2, 2, 2]}
+          color="#526cff"
+          intensity={Math.PI * 0.8}
+        />
+        <EffectComposer>
+          <Bloom
+            luminanceThreshold={0}
+            luminanceSmoothing={0.3}
+            intensity={0.8}
           />
-          <EffectComposer>
-            <Bloom
-              luminanceThreshold={0}
-              luminanceSmoothing={0.3}
-              intensity={0.8} // bloom strength
-            />
-          </EffectComposer>
-          <Suspense>
-            <Orb position={[0, 0, 0]} setLoaded={setLoaded} />
-          </Suspense>
-        </Canvas>
-      </Suspense>
+        </EffectComposer>
+        <Orb position={[0, 0, 0]} setLoaded={setLoaded} />
+      </Canvas>
     </>
   );
 }

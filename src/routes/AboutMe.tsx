@@ -48,7 +48,7 @@ function AboutMe() {
             {isMobile ? null : (
               <img
                 className="aboutme-image img-fade-in"
-                src="/src/assets/me.jpg"
+                src="/assets/me.jpg"
                 alt="A picture of Morgan Evans."
               />
             )}
@@ -78,7 +78,7 @@ function AboutMe() {
             {isMobile ? (
               <img
                 className="aboutme-image img-fade-in"
-                src="/src/assets/me.jpg"
+                src="/assets/me.jpg"
                 alt="A picture of Morgan Evans"
               />
             ) : null}
@@ -110,7 +110,7 @@ function AboutMe() {
 
             <img
               className="aboutme-image img-fade-in"
-              src="/src/assets/nottingham-trent-building.jpg"
+              src="/assets/nottingham-trent-building.jpg"
               alt="A picture of the University of Nottingham Trent building."
             />
           </div>
@@ -120,7 +120,7 @@ function AboutMe() {
               <div className={"img-wrapper"}>
                 <img
                   className="code-snippet img-fade-in"
-                  src="/src/assets/code.png"
+                  src="/assets/code.png"
                   alt="A picture of some code from my A* Visualiser project."
                 />
               </div>
@@ -143,7 +143,7 @@ function AboutMe() {
               <div className={"img-wrapper"}>
                 <img
                   className="code-snippet img-fade-in"
-                  src="/src/assets/code.png"
+                  src="/assets/code.png"
                   alt="A picture of some code from my A* Visualiser project."
                 />
               </div>

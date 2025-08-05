@@ -24,13 +24,6 @@
     color: white;
 }
 
-.Typewriter__wrapper {
-    color: white;
-}
-.Typewriter__cursor {
-    color: white;
-}
-
 .fly-in {
     opacity: 0;
     transition-delay: 1s;

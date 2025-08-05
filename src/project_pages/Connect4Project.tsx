@@ -18,7 +18,7 @@ function Connect4Project() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/connect_4_imgs/connect-4-minimax.png"}
+              src={"/assets/connect_4_imgs/connect-4-minimax.png"}
               alt={
                 "An image of a command line version of connect-4, with a minimax agent."
               }
@@ -51,7 +51,7 @@ function Connect4Project() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/connect_4_imgs/minimax-1.png"}
+              src={"/assets/connect_4_imgs/minimax-1.png"}
               alt={"A note-issimo account with multiple notes on it."}
             ></img>
             <p className={"image-caption"}>
@@ -61,7 +61,7 @@ function Connect4Project() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/connect_4_imgs/minimax-2.png"}
+              src={"/assets/connect_4_imgs/minimax-2.png"}
               alt={"A note-issimo account with multiple notes on it."}
             ></img>
             <p className={"image-caption"}>

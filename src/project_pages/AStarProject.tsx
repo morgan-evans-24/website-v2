@@ -18,7 +18,7 @@ function AStarProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/a_star_imgs/a-star-visualisation.png"}
+              src={"/assets/a_star_imgs/a-star-visualisation.png"}
               alt={
                 "The A* algorithm finding a short path from the start point to the end point."
               }
@@ -66,7 +66,7 @@ function AStarProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/a_star_imgs/filled-grid.png"}
+              src={"/assets/a_star_imgs/filled-grid.png"}
               alt={
                 "A grid entirely filled with squares, with the shortest path following a snaking pattern."
               }
@@ -86,7 +86,7 @@ function AStarProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/a_star_imgs/no-path.png"}
+              src={"/assets/a_star_imgs/no-path.png"}
               alt={
                 "A grid where the path is blocked entirely, causing no route to be drawn."
               }

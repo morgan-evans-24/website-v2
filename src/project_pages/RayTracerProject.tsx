@@ -18,7 +18,7 @@ function RayTracerProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/ray_tracer_imgs/ray-tracer.png"}
+              src={"/assets/ray_tracer_imgs/ray-tracer.png"}
               alt={"A raytraced scene including spheres of varying materials."}
             ></img>
             <div className="tech-list-div">
@@ -52,7 +52,7 @@ function RayTracerProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/ray_tracer_imgs/no-anti-aliasing.png"}
+              src={"/assets/ray_tracer_imgs/no-anti-aliasing.png"}
               alt={'A raytraced scene without anti-aliasing, showing "jaggies"'}
             ></img>
             <p className={"image-caption"}>
@@ -62,7 +62,7 @@ function RayTracerProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/ray_tracer_imgs/anti-aliasing.png"}
+              src={"/assets/ray_tracer_imgs/anti-aliasing.png"}
               alt={'A raytraced scene with anti-aliasing, without "jaggies"!'}
             ></img>
             <p className={"image-caption"}>
@@ -85,7 +85,7 @@ function RayTracerProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/ray_tracer_imgs/lambertian.png"}
+              src={"/assets/ray_tracer_imgs/lambertian.png"}
               alt={"A raytraced lambertian sphere"}
             ></img>
             <p className={"image-caption"}>
@@ -105,7 +105,7 @@ function RayTracerProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/ray_tracer_imgs/metal-no-fuzz.png"}
+              src={"/assets/ray_tracer_imgs/metal-no-fuzz.png"}
               alt={"A raytraced polished metal sphere"}
             ></img>
             <p className={"image-caption"}>
@@ -115,7 +115,7 @@ function RayTracerProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/ray_tracer_imgs/metal-fuzz.png"}
+              src={"/assets/ray_tracer_imgs/metal-fuzz.png"}
               alt={"A raytraced brushed metal sphere"}
             ></img>
             <p className={"image-caption"}>
@@ -141,7 +141,7 @@ function RayTracerProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/ray_tracer_imgs/glass.png"}
+              src={"/assets/ray_tracer_imgs/glass.png"}
               alt={"A raytraced glass sphere"}
             ></img>
             <p className={"image-caption"}>
@@ -163,7 +163,7 @@ function RayTracerProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/src/assets/ray_tracer_imgs/glass-air-bubble.png"}
+              src={"/assets/ray_tracer_imgs/glass-air-bubble.png"}
               alt={
                 "A raytraced glass sphere with an air bubble inside it, in-front of a cyan lambertian sphere"
               }

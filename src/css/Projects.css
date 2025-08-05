@@ -20,16 +20,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black; !important;
+    background-color: black !important;
 }
 
-.Typewriter__wrapper {
-    color: white;
-    font-size: xx-large;
-}
-.Typewriter__cursor {
-    font-size: xx-large;
-}
 
 .header-subtext {
     color: white;
