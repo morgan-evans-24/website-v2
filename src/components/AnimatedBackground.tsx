@@ -91,7 +91,7 @@ function AnimatedBackground() {
         style={{
           backgroundColor: "black",
           opacity: loaded ? 1 : 0,
-          transition: "opacity 3s ease",
+          transition: "all 3s ease",
         }}
       >
         <ambientLight intensity={Math.PI * 0.2} color="#4255ff" />
