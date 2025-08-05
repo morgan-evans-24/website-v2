@@ -77,7 +77,7 @@ function Orb({
     }
 
     if (isMobile) {
-      meshRef.current.rotation.z += delta / 4;
+      meshRef.current.rotation.y += delta / 4;
     }
   });
 
