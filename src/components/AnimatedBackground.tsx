@@ -4,7 +4,7 @@ import {
   MeshStandardMaterial,
 } from "three";
 
-import { Suspense, useMemo, useRef, useState } from "react";
+import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { type ThreeElements } from "@react-three/fiber";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
@@ -18,6 +18,18 @@ function Orb({
   setLoaded,
   ...props
 }: ThreeElements["mesh"] & { setLoaded: (arg0: boolean) => void }) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 600px)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleResize = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mediaQuery.addEventListener("change", handleResize);
+
+    return () => mediaQuery.removeEventListener("change", handleResize);
+  }, []);
+
   const meshRef = useRef<Mesh>(null!);
   const shaderRef = useRef<WebGLProgramParametersWithUniforms | null>(null);
 
@@ -25,6 +37,7 @@ function Orb({
     const mat = new MeshStandardMaterial({
       emissive: 0x0000ff,
       emissiveIntensity: 0.8,
+      wireframe: isMobile,
     });
     mat.onBeforeCompile = (shader) => {
       material.userData.shader = shader;
@@ -56,11 +69,15 @@ function Orb({
       shaderRef.current = shader;
     };
     return mat;
-  }, []);
+  }, [isMobile]);
 
   useFrame((_state, delta) => {
     if (shaderRef.current) {
       shaderRef.current.uniforms.uTime.value += delta / 10.0;
+    }
+
+    if (isMobile) {
+      meshRef.current.rotation.z += delta / 4;
     }
   });
 
@@ -74,7 +91,7 @@ function Orb({
     >
       <Suspense fallback={<p>loading</p>}>
         {/*<icosahedronGeometry args={[1, 2]} />*/}
-        <icosahedronGeometry args={[1, 200]} />
+        <icosahedronGeometry args={[1, isMobile ? 5 : 200]} />
         <primitive object={material} attach="material" />
       </Suspense>
     </mesh>
@@ -87,7 +104,7 @@ function AnimatedBackground() {
   return (
     <>
       <Canvas
-        className="scene"
+        className={"scene"}
         style={{
           backgroundColor: "black",
           opacity: loaded ? 1 : 0,

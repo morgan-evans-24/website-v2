@@ -4,6 +4,7 @@ import "../css/Home.css";
 import FloatingText from "../components/FloatingText.tsx";
 import MyTypewriter from "../components/MyTypewriter.tsx";
 import { lazy, Suspense } from "react";
+import ScrollToTop from "../components/ScrollToTop.tsx";
 
 const AnimatedBackground = lazy(
   () => import("../components/AnimatedBackground.tsx"),
@@ -12,6 +13,7 @@ const AnimatedBackground = lazy(
 function Home() {
   return (
     <>
+      <ScrollToTop />
       <title>Home</title>
       <div className="shader-background">
         <Suspense fallback={null}>

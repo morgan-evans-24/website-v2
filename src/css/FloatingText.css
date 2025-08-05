@@ -9,13 +9,24 @@
     margin: 5vh 0vh 25vh 0vh;
     box-sizing: border-box;
     background-color: #00000077;
-    backdrop-filter: blur(5px);
     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.3),
     0 0 40px rgba(0, 0, 0, 0.2),
     0 0 80px rgba(0, 0, 0, 0.1),
     0 0 160px rgba(0, 0, 0, 0.05);
 
     border-radius: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .div-background {
+        backdrop-filter: blur(2px);
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .div-background {
+        backdrop-filter: blur(5px);
+    }
 }
 
 .text {
