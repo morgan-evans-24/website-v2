@@ -42,6 +42,7 @@ html, body {
 .aboutme-image {
     height: 70vh;
     width: auto;
+    max-width: 90%;
     margin: auto;
     object-fit: cover;
     border-radius: 20%;
