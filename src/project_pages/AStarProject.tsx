@@ -9,6 +9,7 @@ function AStarProject() {
 
   return (
     <>
+      <title>A* Visualiser</title>
       <ScrollToTop />
       <div className="project">
         <div className="project-container">

@@ -1,5 +1,5 @@
 import "../css/FloatingText.css";
-import { type ReactNode, useEffect } from "react";
+import { type ReactNode, useEffect, useState } from "react";
 
 type AnimationStyle = "flyInLeft" | "flyInRight" | "fadeIn";
 
@@ -10,10 +10,22 @@ interface props {
 }
 
 function FloatingText({ headerText, bodyText, animationStyle }: props) {
+  const [isMobile, setIsMobile] = useState(false);
+
   const animationStyleClass =
     animationStyle === "flyInLeft" || animationStyle === "flyInRight"
       ? "fly-in " + animationStyle
       : "fade-in";
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 600px)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleResize = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mediaQuery.addEventListener("change", handleResize);
+
+    return () => mediaQuery.removeEventListener("change", handleResize);
+  }, []);
 
   useEffect(() => {
     const elements = document.querySelectorAll(".div-background");
@@ -35,7 +47,11 @@ function FloatingText({ headerText, bodyText, animationStyle }: props) {
   }, []);
 
   return (
-    <div className={animationStyleClass + " div-background"}>
+    <div
+      className={
+        (isMobile ? "mobile" : animationStyleClass) + " div-background"
+      }
+    >
       {headerText}
       {bodyText}
     </div>

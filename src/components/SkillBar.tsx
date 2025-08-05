@@ -1,6 +1,8 @@
 import { ProgressBar } from "react-bootstrap";
 import type { Color } from "react-bootstrap/types";
 
+// This isn't used anywhere, but I thought I'd keep it around as it might be useful someday.
+
 interface Props {
   name: string;
   value: number;

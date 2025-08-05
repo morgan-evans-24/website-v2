@@ -12,11 +12,13 @@ import NoteissimoProject from "./project_pages/NoteissimoProject.tsx";
 import Connect4Project from "./project_pages/Connect4Project.tsx";
 import AStarProject from "./project_pages/AStarProject.tsx";
 import FallingSandProject from "./project_pages/FallingSandProject.tsx";
+import PageNotFound from "./components/PageNotFound.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <PageNotFound />,
     children: [
       { index: true, element: <Home /> },
       { path: "aboutme", element: <AboutMe /> },

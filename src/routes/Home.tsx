@@ -8,6 +8,7 @@ import MyTypewriter from "../components/MyTypewriter.tsx";
 function Home() {
   return (
     <>
+      <title>Home</title>
       <div className="shader-background">
         <AnimatedBackground />
       </div>
@@ -47,10 +48,10 @@ function Home() {
           bodyText={
             <>
               <p className={"text"}>
-                <b>Email</b>: morgan.evans0805@gmail.com
+                <b>Email:</b> morgan.evans0805@gmail.com
               </p>
               <p className={"text"}>
-                <b>Phone number</b>: +447484752322
+                <b>Phone number:</b> +447484752322
               </p>
               <p className={"text"}>
                 There are links to my social media platforms in the navigation

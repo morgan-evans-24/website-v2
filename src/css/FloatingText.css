@@ -48,7 +48,7 @@
     align-self: end;
 }
 
-.fly-in.show-text, .fade-in.show-text{
+.fly-in.show-text, .fade-in.show-text, .mobile.show-text {
     opacity: 1;
     transform: translateX(0);
 }
@@ -57,5 +57,12 @@
     opacity: 0;
     transition: all 2s ease;
     width: 60vw;
+    text-align: center;
+}
+
+.mobile {
+    opacity: 0;
+    transition: all 2s ease;
+    width: 90vw;
     text-align: center;
 }

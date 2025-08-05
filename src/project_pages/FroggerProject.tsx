@@ -9,6 +9,7 @@ function FroggerProject() {
 
   return (
     <>
+      <title>Frogger</title>
       <ScrollToTop />
       <div className="project">
         <div className="project-container">

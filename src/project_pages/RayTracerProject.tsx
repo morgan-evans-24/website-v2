@@ -9,6 +9,7 @@ function RayTracerProject() {
 
   return (
     <>
+      <title>Raytracing Engine</title>
       <ScrollToTop />
       <div className="project">
         <div className="project-container">

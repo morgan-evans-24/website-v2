@@ -9,6 +9,7 @@ function NoteissimoProject() {
 
   return (
     <>
+      <title>Note-issimo</title>
       <ScrollToTop />
       <div className="project">
         <div className="project-container">

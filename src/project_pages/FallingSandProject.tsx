@@ -1,6 +1,4 @@
-import React from "react";
-
-function FallingSandProject(props) {
+function FallingSandProject() {
   return <div></div>;
 }
 

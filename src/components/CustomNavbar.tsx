@@ -1,6 +1,7 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useLocation } from "react-router";
+import "../css/CustomNavbar.css";
 
 function CustomNavbar() {
   return (

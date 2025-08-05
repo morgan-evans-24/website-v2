@@ -9,6 +9,7 @@ function Connect4Project() {
 
   return (
     <>
+      <title>Connect-4 Minimax</title>
       <ScrollToTop />
       <div className="project">
         <div className="project-container">
