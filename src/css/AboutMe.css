@@ -42,7 +42,6 @@ html, body {
 .aboutme-image {
     height: 70vh;
     width: auto;
-    max-width: 60%;
     margin: auto;
     object-fit: cover;
     border-radius: 20%;
@@ -83,6 +82,10 @@ html, body {
         margin-top: 10px;
     }
 
+    .aboutme-image {
+        max-width: 90%;
+    }
+
     .hero-container {
         flex-direction: column;
         height: 100%;
@@ -104,6 +107,10 @@ html, body {
     .My-Main-Content {
         width: 60%;
         margin-top: 20px;
+    }
+
+    .aboutme-image {
+        max-width: 60%;
     }
 
     .hero-container {
