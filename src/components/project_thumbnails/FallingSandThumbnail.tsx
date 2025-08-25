@@ -4,7 +4,7 @@ function FallingSandThumbnail() {
   return (
     <ProjectThumbnail
       header={"Falling Sand Simulator"}
-      pathToBackground={"/assets/pexels-padrinan-255379.jpg"}
+      pathToBackground={"/assets/falling_sand_imgs/falling-yellow-sand.png"}
       altImageText={"Bento"}
       flyIn={"right"}
       navigateTo={"fallingsand"}

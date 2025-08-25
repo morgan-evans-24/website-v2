@@ -18,74 +18,89 @@ function FallingSandProject() {
           <div className="image-container">
             <img
               className="project-image"
-              src={"/assets/connect_4_imgs/connect-4-minimax.png"}
+              src={"/assets/falling_sand_imgs/falling-yellow-sand.png"}
               alt={"An image of a falling sand simulator made in python."}
             ></img>
             <div className="tech-list-div">
               <p className="tech-list-text">Technologies used:</p>
               <ul className="tech-list-list">
-                <TechnologyTag variant={"Haskell"} />
+                <TechnologyTag variant={"Python"} />
               </ul>
             </div>
+              <div className={"github-div"}>
+                  <a
+                      className={"github-button"}
+                      target="_blank"
+                      href="https://github.com/morgan-evans-24/Falling-Sand-Simulator"
+                  >
+                      Go to GitHub page
+                  </a>
+              </div>
           </div>
           <hr className={"divider"} />
           <p>
-            For my "Advanced Functional Programming" module during my second
-            year of university, I recreated the board game <i>Connect-4</i>, as
-            well as creating a Minimax agent to play the game. The project was
-            built in Haskell and is nearly entirely functionally pure, the only
-            impure parts being user I/O.
+            I decided to make this project as a way of testing out pygame, a library for python that I had never used before.
+              I have a strong interest in cellular automata and so a falling sand simulator seemed like a good idea to figure out how to create using pygame.
           </p>
-          <hr className={"divider"} />
-          <h3>The Minimax Algorithm</h3>
-          <p>
-            The Minimax algorithm is a backtracking algorithm widely used in
-            two-player games. The algorithm assumes two players, a minimiser
-            trying to get the score as low as possible and a maximiser doing the
-            opposite. The algorithm works by assigning all possible moves down
-            to a given depth a score, and then backtracks to determine which
-            move on the top layer should be played.
-          </p>
+            <hr className={"divider"} />
+            <h3>Run Flags and Features</h3>
+            <p>
+                Implemented for the project are a number of flags that the program can be called with that control the behaviour of the program.
+            </p>
           <div className="image-container">
             <img
               className="project-image"
-              src={"/assets/connect_4_imgs/minimax-1.png"}
-              alt={"A note-issimo account with multiple notes on it."}
+              src={"/assets/falling_sand_imgs/cli-help-screen.png"}
+              alt={"A terminal showing the flags available to the software and their effects."}
             ></img>
             <p className={"image-caption"}>
-              The algorithm assigns each leaf node a score.
+              Flags give the user more control over the look of the program.
             </p>
           </div>
-          <div className="image-container">
-            <img
-              className="project-image"
-              src={"/assets/connect_4_imgs/minimax-2.png"}
-              alt={"A note-issimo account with multiple notes on it."}
-            ></img>
-            <p className={"image-caption"}>
-              It then backtracks to decide which move to make at the top level.
-              Maximiser should go left.
+            <p>
+                The flags included in the program include:
+                <ul>
+                    <li><b>-h, --help</b>, this displays the help screen, common in most CLI tools.</li>
+                    <li><b>-c, --cell-color</b>, takes a string as a parameter in the form of a hexadecimal colour code, changes the colour of the sand.</li>
+                    <li><b>-r, --rainbow</b>, causes the sand to change colour over time while the left mouse button is clicked.</li>
+                    <li><b>-rs, --rainbow-speed</b>, sets the speed at which the colour changes when in rainbow mode.</li>
+                    <li><b>-nb, --no-borders</b>, removes the borders from cells.</li>
+                </ul>
             </p>
-          </div>
-          <p>
-            Using Minimax, we can be certain that we are making the best
-            possible move with the information we have. The main limitation of
-            the Minimax algorithm is that it is very computationally expensive,
-            and that the depth the move tree is built to is proportional to the
-            AI's skill in the game. This Connect-4 Minimax algorithm can build a
-            move tree to a depth of 7.
-          </p>
-          <hr className={"divider"} />
-          <h3>Going forward</h3>
-          <p>
-            Due to the limitations of this coursework, there were limited
-            optimisations I could make to the algorithm. In the future, were I
-            to make another Minimax agent, I would introduce ways of pruning the
-            game tree to make it a lot faster, allowing it to go to a higher
-            depth. For example, Alpha-Beta pruning could be used to trim down
-            unnecessary branches of the tree, by removing branches that start
-            with a move that would never be played.
-          </p>
+            <p>
+                These flags allow the user to control how their simulation looks, and makes the project more flexible. Below are some examples of images generated using various flags.
+            </p>
+
+            <div className="image-container">
+                <img
+                    className="project-image"
+                    src={"/assets/falling_sand_imgs/rainbow-sand.png"}
+                    alt={"A terminal showing the flags available to the software and their effects."}
+                ></img>
+                <p className={"image-caption"}>
+                    A result generated from running the program with the -r and -nb flags.
+                </p>
+            </div>
+
+            <div className="image-container">
+                <img
+                    className="project-image"
+                    src={"/assets/falling_sand_imgs/pastel-rainbow-pyramids.png"}
+                    alt={"A terminal showing the flags available to the software and their effects."}
+                ></img>
+                <p className={"image-caption"}>
+                    Using the -c and -r flags can create rainbows made up of pastel colours.
+                </p>
+            </div>
+            <hr className={"divider"} />
+            <h3>Going Forward</h3>
+            <p>
+                There are quite a few different features I could implement for this project, should I come back to it in the future.
+                <ul>
+                    <li><b>Different material types</b> - I think adding different materials to the project would really make this project shine. For example, adding a water material, or perhaps a material that isn't effected by gravity.</li>
+                    <li><b>GUI</b> - I think adding a GUI to the program instead of having users operate through CLI flags would make the program more usable overall.</li>
+                </ul>
+            </p>
           <button
             className="back-button"
             onClick={() => {
