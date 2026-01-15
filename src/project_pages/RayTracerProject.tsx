@@ -29,7 +29,7 @@ function RayTracerProject() {
             </div>
           </div>
           <hr className={"divider"} />
-          <p className="description">
+          <p>
             For this project, I implemented a Ray Tracing engine in C++. I found
             this project really interesting as it was my introduction to C++ and
             also opened my eyes to a far more mathematical style of programming.

@@ -39,7 +39,7 @@ function NoteissimoProject() {
             </div>
           </div>
           <hr className={"divider"} />
-          <p className="description">
+          <p>
             As an introduction to React, I created a markdown note-taking app.
             The app allows users to create and log into an account, and once
             logged in see their previously taken notes, as well as create new
