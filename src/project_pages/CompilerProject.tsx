@@ -72,8 +72,7 @@ function CompilerProject() {
                     <p>
                         The backend starts by converting the AST into a lower-level intermediate representation, more
                         akin to the target language. The final translation is from this lower-level representation into
-                        the source language, which is binary code for the <i>triangle abstract machine</i> as laid out
-                        <a href="https://www.cs.unc.edu/~prins/Classes/520/Programming-Language-Processors-in-Java_Watt-Brown.pdf?"> here</a>.
+                        the source language, which is binary code for the <i>triangle abstract machine</i> as laid out <a href="https://www.cs.unc.edu/~prins/Classes/520/Programming-Language-Processors-in-Java_Watt-Brown.pdf?">here</a>.
                     </p>
                     <p>
                         This was a really interesting coursework overall, having learnt about how complex tools that
