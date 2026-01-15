@@ -254,7 +254,7 @@ function Projects() {
                     <p className={"header-subtext"}>
                         Below is a compilation of some of the biggest projects I have worked
                         on. This includes projects completed in my own time and during my
-                        time at University, so the source code for some projects has been removed in
+                        time at university, so the source code for some projects has been removed in
                         an attempt to avoid academic misconduct. Click on a project to learn more!
                     </p>
                     <hr className={"divider"} />
