@@ -6,7 +6,7 @@ function RayTracerThumbnail() {
       header={"Raytracing Engine"}
       pathToBackground={"/assets/ray_tracer_imgs/ray-tracer.png"}
       altImageText={"Bento"}
-      flyIn={"right"}
+      flyIn={"left"}
       navigateTo={"raytracer"}
     />
   );

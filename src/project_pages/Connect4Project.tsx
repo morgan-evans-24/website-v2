@@ -52,7 +52,7 @@ function Connect4Project() {
             <img
               className="project-image"
               src={"/assets/connect_4_imgs/minimax-1.png"}
-              alt={"A note-issimo account with multiple notes on it."}
+              alt={"The Minimax algorithm assigning scores to the leaf nodes."}
             ></img>
             <p className={"image-caption"}>
               The algorithm assigns each leaf node a score.
@@ -62,7 +62,7 @@ function Connect4Project() {
             <img
               className="project-image"
               src={"/assets/connect_4_imgs/minimax-2.png"}
-              alt={"A note-issimo account with multiple notes on it."}
+              alt={"Scores propogating up the Minimax tree."}
             ></img>
             <p className={"image-caption"}>
               It then backtracks to decide which move to make at the top level.

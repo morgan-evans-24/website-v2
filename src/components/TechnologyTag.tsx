@@ -9,7 +9,9 @@ interface Props {
     | "C#"
     | "Unity"
     | "React"
-    | "TypeScript/JavaScript";
+    | "TypeScript/JavaScript"
+    | "MatLab"
+    | "OpenGL"
 }
 
 const tagColors: Record<
@@ -26,6 +28,8 @@ const tagColors: Record<
   Unity: { background: "#525252", color: "#fff" },
   React: { background: "#58c4dc", color: "#000" },
   "TypeScript/JavaScript": { background: "#125f97", color: "#fff" },
+  "MatLab": { background: "#9d3125", color: "#fff" },
+  "OpenGL": { background: "#fff", color: "#000" },
 };
 
 function TechnologyTag({ variant }: Props) {

@@ -28,35 +28,56 @@ const LazySueChefThumbnail = lazy(
 const LazyCompilerThumbnail = lazy(
     () => import("../components/project_thumbnails/CompilerThumbnail.tsx"),
 );
+const LazyCropWeedSegmenterThumbnail = lazy(
+    () => import("../components/project_thumbnails/CropWeedSegmenterThumbnail.tsx"),
+);
+const LazyWoodswalkerThumbnail = lazy(
+    () => import("../components/project_thumbnails/WoodswalkerThumbnail.tsx"),
+);
+const LazyChessBotThumbnail = lazy(
+    () => import("../components/project_thumbnails/ChessEngineThumbnail.tsx"),
+);
 
 
 const bentoItems = [
     {
         id: 1,
         color: "black",
-        title: "A* Visualisation",
+        title: "Chess Bot",
         element: (
             <Suspense fallback={<div>Loading...</div>}>
-                <LazyAStarThumbnail />
+                <LazyChessBotThumbnail />
             </Suspense>
         ),
-        width: 2,
-        height: 1,
+        width: 3,
+        height: 2,
     },
     {
         id: 2,
         color: "black",
-        title: "note-issimo",
+        title: "Crop/Weed Segmentation",
         element: (
             <Suspense fallback={<div>Loading...</div>}>
-                <LazyNoteissimoThumbnail />
+                <LazyCropWeedSegmenterThumbnail/>
             </Suspense>
         ),
-        width: 4,
-        height: 1,
+        width: 3,
+        height: 2,
     },
     {
         id: 3,
+        color: "black",
+        title: "Woodswalker",
+        element: (
+            <Suspense fallback={<div>Loading...</div>}>
+                <LazyWoodswalkerThumbnail />
+            </Suspense>
+        ),
+        width: 6,
+        height: 3,
+    },
+    {
+        id: 4,
         color: "black",
         title: "Raytracing Engine",
         element: (
@@ -65,10 +86,10 @@ const bentoItems = [
             </Suspense>
         ),
         width: 4,
-        height: 2,
+        height: 4,
     },
     {
-        id: 4,
+        id: 5,
         color: "black",
         title: "Frogger",
         element: (
@@ -77,10 +98,10 @@ const bentoItems = [
             </Suspense>
         ),
         width: 2,
-        height: 2,
+        height: 4,
     },
     {
-        id: 5,
+        id: 6,
         color: "black",
         title: "Connect-4 MiniMax",
         element: (
@@ -89,10 +110,10 @@ const bentoItems = [
             </Suspense>
         ),
         width: 3,
-        height: 1,
+        height: 2,
     },
     {
-        id: 6,
+        id: 7,
         color: "black",
         title: "Falling Sand Simulator",
         element: (
@@ -101,10 +122,10 @@ const bentoItems = [
             </Suspense>
         ),
         width: 3,
-        height: 1,
+        height: 2,
     },
     {
-        id: 7,
+        id: 8,
         color: "black",
         title: "Sue Chef",
         element: (
@@ -113,10 +134,10 @@ const bentoItems = [
             </Suspense>
         ),
         width: 4,
-        height: 1,
+        height: 2,
     },
     {
-        id: 8,
+        id: 9,
         color: "black",
         title: "Compiler",
         element: (
@@ -125,8 +146,33 @@ const bentoItems = [
             </Suspense>
         ),
         width: 2,
-        height: 1,
-    }
+        height: 2,
+    },
+    {
+        id: 10,
+        color: "black",
+        title: "A* Visualisation",
+        element: (
+            <Suspense fallback={<div>Loading...</div>}>
+                <LazyAStarThumbnail />
+            </Suspense>
+        ),
+        width: 2,
+        height: 2,
+    },
+    {
+        id: 11,
+        color: "black",
+        title: "note-issimo",
+        element: (
+            <Suspense fallback={<div>Loading...</div>}>
+                <LazyNoteissimoThumbnail />
+            </Suspense>
+        ),
+        width: 4,
+        height: 2,
+    },
+
 
 ];
 
@@ -134,29 +180,41 @@ const bentoItemsMobile = [
     {
         id: 1,
         color: "black",
-        title: "A* Visualisation",
+        title: "Chess Bot",
         element: (
             <Suspense fallback={<div>Loading...</div>}>
-                <LazyAStarThumbnail />
+                <LazyChessBotThumbnail />
             </Suspense>
         ),
         width: 1,
-        height: 1,
+        height: 2,
     },
     {
         id: 2,
         color: "black",
-        title: "note-issimo",
+        title: "Crop/Weed Segmentation",
         element: (
             <Suspense fallback={<div>Loading...</div>}>
-                <LazyNoteissimoThumbnail />
+                <LazyCropWeedSegmenterThumbnail/>
             </Suspense>
         ),
         width: 1,
-        height: 1,
+        height: 2,
     },
     {
         id: 3,
+        color: "black",
+        title: "Woodswalker",
+        element: (
+            <Suspense fallback={<div>Loading...</div>}>
+                <LazyWoodswalkerThumbnail />
+            </Suspense>
+        ),
+        width: 1,
+        height: 2,
+    },
+    {
+        id: 4,
         color: "black",
         title: "Raytracing Engine",
         element: (
@@ -165,10 +223,10 @@ const bentoItemsMobile = [
             </Suspense>
         ),
         width: 1,
-        height: 1,
+        height: 2,
     },
     {
-        id: 4,
+        id: 5,
         color: "black",
         title: "Frogger",
         element: (
@@ -177,10 +235,10 @@ const bentoItemsMobile = [
             </Suspense>
         ),
         width: 1,
-        height: 1,
+        height: 2,
     },
     {
-        id: 5,
+        id: 6,
         color: "black",
         title: "Connect-4 MiniMax",
         element: (
@@ -189,10 +247,10 @@ const bentoItemsMobile = [
             </Suspense>
         ),
         width: 1,
-        height: 1,
+        height: 2,
     },
     {
-        id: 6,
+        id: 7,
         color: "black",
         title: "Falling Sand Simulator",
         element: (
@@ -201,10 +259,10 @@ const bentoItemsMobile = [
             </Suspense>
         ),
         width: 1,
-        height: 1,
+        height: 2,
     },
     {
-        id: 7,
+        id: 8,
         color: "black",
         title: "Sue Chef",
         element: (
@@ -213,10 +271,10 @@ const bentoItemsMobile = [
             </Suspense>
         ),
         width: 1,
-        height: 1,
+        height: 2,
     },
     {
-        id: 8,
+        id: 9,
         color: "black",
         title: "Compiler",
         element: (
@@ -225,8 +283,34 @@ const bentoItemsMobile = [
             </Suspense>
         ),
         width: 1,
-        height: 1,
-    }
+        height: 2,
+    },
+    {
+        id: 10,
+        color: "black",
+        title: "A* Visualisation",
+        element: (
+            <Suspense fallback={<div>Loading...</div>}>
+                <LazyAStarThumbnail />
+            </Suspense>
+        ),
+        width: 1,
+        height: 2,
+    },
+    {
+        id: 11,
+        color: "black",
+        title: "note-issimo",
+        element: (
+            <Suspense fallback={<div>Loading...</div>}>
+                <LazyNoteissimoThumbnail />
+            </Suspense>
+        ),
+        width: 1,
+        height: 2,
+    },
+
+
 ];
 
 function Projects() {
@@ -260,7 +344,7 @@ function Projects() {
                     <hr className={"divider"} />
                     <BentoGrid
                         gridCols={isMobile ? 1 : 6}
-                        rowHeight={350}
+                        rowHeight={175}
                         items={isMobile ? bentoItemsMobile : bentoItems}
                         classNames={{
                             container: "container",

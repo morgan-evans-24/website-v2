@@ -36,6 +36,18 @@ const CompilerProject = lazy(
     () => import("./project_pages/CompilerProject.tsx"),
 );
 
+const WoodswalkerProject = lazy(
+    () => import("./project_pages/WoodswalkerProject.tsx"),
+);
+
+const CropWeedSegmenterProject = lazy(
+    () => import("./project_pages/CropWeedSegmenterProject.tsx"),
+);
+
+const ChessEngineProject = lazy(
+    () => import("./project_pages/ChessEngineProject.tsx"),
+);
+
 
 const PageNotFound = lazy(() => import("./components/PageNotFound.tsx"));
 
@@ -59,6 +71,9 @@ const router = createBrowserRouter([
                     { path: "fallingsand", element: <FallingSandProject /> },
                     { path: "suechef", element: <SueChefProject /> },
                     { path: "compiler", element: <CompilerProject /> },
+                    { path: "woodswalker", element: <WoodswalkerProject /> },
+                    { path: "cropweedsegmenter", element: <CropWeedSegmenterProject />},
+                    { path: "chessengine", element: <ChessEngineProject />}
                 ],
             },
         ],
